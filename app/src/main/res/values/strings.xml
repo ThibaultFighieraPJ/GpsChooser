@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GpsChooser</string>
+    <string name="action_settings">Settings</string>
+    <string name="open_gps">Naviguer avec</string>
+    <string name="clipboard">Copier</string>
+    <string name="mappy">Mappy</string>
+    <string name="copyToClipBoardOk">L\'addresse a été copiée dans votre presse-papier</string>
+</resources>
