@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity
 		// Add a custom intent to handle the "copy to clipboard" option.
 		Intent copyToClipboard = new Intent(this, ShareToClipboardActivity.class);
 		copyToClipboard.putExtra(Intent.EXTRA_TEXT, address);
-		gpsIntentList.add(copyToClipboard);
 
 		// Add Mappy if note installed
 		if (showMappy)
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity
 		}
 
 		// Start App Chooser
-		Intent chooserIntent = Intent.createChooser(gpsIntentList.remove(0), getResources().getText(R.string.open_gps));
+		Intent chooserIntent = Intent.createChooser(copyToClipboard, getResources().getText(R.string.open_gps));
 		chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, gpsIntentList.toArray(new Parcelable[]{}));
 		chooserIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		startActivity(chooserIntent);
