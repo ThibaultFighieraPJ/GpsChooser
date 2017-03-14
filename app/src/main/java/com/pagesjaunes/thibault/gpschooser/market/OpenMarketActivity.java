@@ -21,6 +21,7 @@ abstract class OpenMarketActivity extends Activity
 		//Link to the market
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		intent.setData(Uri.parse(MARKET_PREFIX + getMarketPackage()));
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		startActivity(intent);
 		finish();
 	}
